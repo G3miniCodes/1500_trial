@@ -1,6 +1,3 @@
 # Auto-generated requirements for converted code
-# Review and pin versions as appropriate before deploying
 # Python >= 3.12  (generated on 3.12.10)
-
-numpy
-pandas
+# No third-party requirements detected
