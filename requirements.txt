@@ -2,6 +2,5 @@
 # Review and pin versions as appropriate before deploying
 # Python >= 3.12  (generated on 3.12.10)
 
-matplotlib
 numpy
 pandas
