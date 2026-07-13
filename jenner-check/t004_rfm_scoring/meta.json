@@ -1,0 +1,7 @@
+{
+  "bundle": "t004_rfm_scoring",
+  "source_file": "merged_project.sas",
+  "source_blob_sha": "b423d218b6ccb802eb77739faddc0caf078ba0e0",
+  "source_commit": "7bc1c298e16dd52fbd8e4f26615b6607e68f411c",
+  "notes": "Modules 01-03 (options/macros) + 04.2 (synthetic transaction ingestion only) + 07.2 (transaction cleaning/winsorisation) + 17.1 (RFM scoring: PROC SQL aggregation into RECENCY/FREQUENCY/MONETARY, two PROC RANK calls for quintile scoring, segment assignment, PROC FREQ distribution, PROC MEANS profile). BASE_PATH rewritten to a relative ./sasdata tree. RECENCY is measured from the script's own &PERIOD_END constant (31DEC2025, already declared in module 02) instead of the source's 'today() - max(TXN_DATE)': Jenner's PROC SQL currently type-errors on TODAY() arithmetic against a DATE column (comparison works, arithmetic doesn't) -- filed as EastAgile/jenner-language#15125 (test 404304_proc_sql_today_date_arithmetic). PROC RANK / PROC FREQ / PROC MEANS and all segment logic run unmodified."
+}

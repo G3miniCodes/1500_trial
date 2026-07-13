@@ -1,0 +1,7 @@
+{
+  "bundle": "t006_inferential_stats",
+  "source_file": "merged_project.sas",
+  "source_blob_sha": "b423d218b6ccb802eb77739faddc0caf078ba0e0",
+  "source_commit": "7bc1c298e16dd52fbd8e4f26615b6607e68f411c",
+  "notes": "Modules 01-03 + 04 (ingestion) + 05 (reference data) + 07 (transformation through MASTER_CUSTOMER) + 09.1/09.2/09.5 (inferential statistics: PROC TTEST two-sample t-test by gender, PROC GLM one-way ANOVA of credit score by segment with Tukey means comparison and LS-means, PROC NPAR1WAY Wilcoxon rank-sum test churned vs retained). 09.3/09.4/09.6 omitted only to keep this bundle focused -- they exercise PROC GLM/FREQ/CORR variants already covered by other bundles, not because they failed. BASE_PATH rewritten to a relative ./sasdata tree; otherwise unmodified. Fully reproducible byte-identical output across repeated runs (fixed seed)."
+}

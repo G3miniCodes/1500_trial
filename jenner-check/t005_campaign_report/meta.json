@@ -1,0 +1,7 @@
+{
+  "bundle": "t005_campaign_report",
+  "source_file": "merged_project.sas",
+  "source_blob_sha": "b423d218b6ccb802eb77739faddc0caf078ba0e0",
+  "source_commit": "7bc1c298e16dd52fbd8e4f26615b6607e68f411c",
+  "notes": "Modules 01-03 (options/macros) + 04.3 (synthetic campaign ingestion via call streaminit) + 07.5 (campaign ROI KPI enrichment: budget utilisation, CTR, CVR, CPC, CPL, ROAS) + 12.4 (PROC REPORT digital campaign performance report with grouped/summed/mean column definitions). BASE_PATH rewritten to a relative ./sasdata tree; otherwise unmodified. Fully reproducible byte-identical output across repeated runs (fixed seed)."
+}

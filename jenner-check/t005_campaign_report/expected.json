@@ -1,0 +1,13 @@
+{
+  "_captured_at": "2026-07-13T07:47:57Z",
+  "_captured_run_id": "r_97578c4359544d46bbdc1827137485d5",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote STAGING.CAMPAIGNS_RAW (100 rows, 10 columns).",
+    "NOTE: Wrote STAGING.CAMPAIGNS_ENRICHED (100 rows, 18 columns).",
+    "NOTE: PROC REPORT output 100 observations with 13 variables."
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

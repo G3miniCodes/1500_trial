@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-07-13T07:39:58Z",
+  "_captured_run_id": "r_423d0150c2ff4ac88de92aec101a4259",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote STAGING.CLUSTER_INPUT (100 rows, 11 columns).",
+    "NOTE: PROC STDIZE: Wrote 100 rows to STAGING.CLUSTER_STD",
+    "NOTE: PROC FASTCLUS data=STAGING.CLUSTER_STD maxclusters=10",
+    "NOTE: PROC FASTCLUS: 100 observations, 8 variables, 10 clusters using k-means"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

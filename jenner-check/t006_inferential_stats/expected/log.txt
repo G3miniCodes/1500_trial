@@ -1,0 +1,182 @@
+
+NOTE: Option OBS changed to 100.
+NOTE: Library SASDATA assigned path=./sasdata.
+NOTE: Library SASDATA assigned path=./sasdata/raw.
+NOTE: Library SASDATA assigned path=./sasdata/staging.
+NOTE: Library SASDATA assigned path=./sasdata/output.
+NOTE: Library SASDATA assigned path=./sasdata/logs.
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+NOTE: Option COMPRESS changed to YES.
+NOTE: Option LS changed to 200.
+NOTE: Option PS changed to 60.
+NOTE: Option VALIDVARNAME changed to UPCASE.
+NOTE: Option OBS changed to MAX.
+NOTE: Option ERRORS changed to 20.
+NOTE: Option CPUCOUNT changed to ACTUAL.
+NOTE: Option TITLE changed to EY Analytics – Enterprise Reporting Suite.
+NOTE: Option FOOTNOTE changed to CONFIDENTIAL – For Internal Use Only.
+MLOGIC(TIMER_START):  Beginning execution.
+MLOGIC(TIMER_START):  Parameter LABEL has value INGESTION
+SYMBOLGEN:  Macro variable LABEL resolves to INGESTION
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value INFO
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value Starting data ingestion.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:48:27
+SYMBOLGEN:  Macro variable LEVEL resolves to INFO
+SYMBOLGEN:  Macro variable MSG resolves to Starting data ingestion.
+SYMBOLGEN:  Macro variable RAW_PATH resolves to ./sasdata/raw
+13JUL2026:07:48:27 [INFO] Starting data ingestion.
+NOTE: Library RAWDATA assigned path=./sasdata/raw.
+SYMBOLGEN:  Macro variable STAGE_PATH resolves to ./sasdata/staging
+NOTE: Library STAGING assigned path=./sasdata/staging.
+SYMBOLGEN:  Macro variable OUTPUT_PATH resolves to ./sasdata/output
+NOTE: Library OUTLIB assigned path=./sasdata/output.
+SYMBOLGEN:  Macro variable LOG_PATH resolves to ./sasdata/logs
+NOTE: Library LOGLIB assigned path=./sasdata/logs.
+SYMBOLGEN:  Macro variable SEED resolves to 42
+NOTE: DATA STAGING.CUSTOMERS_RAW
+
+
+NOTE: Wrote STAGING.CUSTOMERS_RAW (100 rows, 15 columns).
+NOTE: DATA elapsed:
+  wall  0.14 seconds
+  cpu   0.14 seconds
+SYMBOLGEN:  Macro variable SEED resolves to 42
+NOTE: DATA STAGING.TRANSACTIONS_RAW
+
+
+NOTE: Wrote STAGING.TRANSACTIONS_RAW (100 rows, 9 columns).
+NOTE: DATA elapsed:
+  wall  0.96 seconds
+  cpu   0.96 seconds
+SYMBOLGEN:  Macro variable SEED resolves to 42
+NOTE: DATA STAGING.CAMPAIGNS_RAW
+
+
+NOTE: Wrote STAGING.CAMPAIGNS_RAW (100 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+MLOGIC(TIMER_STOP):  Beginning execution.
+MLOGIC(TIMER_STOP):  Parameter LABEL has value INGESTION
+SYMBOLGEN:  Macro variable LABEL resolves to INGESTION
+SYMBOLGEN:  Macro variable LABEL resolves to INGESTION
+SYMBOLGEN:  Macro variable _TIMER_START_INGESTION resolves to 2099548107
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable LABEL resolves to INGESTION
+SYMBOLGEN:  Macro variable _ELAPSED resolves to 1
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value PERF
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value INGESTION elapsed 1 seconds.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:48:28
+SYMBOLGEN:  Macro variable LEVEL resolves to PERF
+SYMBOLGEN:  Macro variable MSG resolves to INGESTION elapsed 1 seconds.
+13JUL2026:07:48:28 [PERF] INGESTION elapsed 1 seconds.
+NOTE: DATA STAGING.REF_COUNTRY
+
+NOTE: Processing inline DATALINES (10 lines)
+
+NOTE: Read 10 rows from DATALINES.
+NOTE: Wrote STAGING.REF_COUNTRY (10 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA STAGING.REF_SEGMENT_TIER
+
+NOTE: Processing inline DATALINES (4 lines)
+
+NOTE: Read 4 rows from DATALINES.
+NOTE: Wrote STAGING.REF_SEGMENT_TIER (4 rows, 6 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA STAGING.REF_MERCHANT_CATEGORY
+
+NOTE: Processing inline DATALINES (8 lines)
+
+NOTE: Read 8 rows from DATALINES.
+NOTE: Wrote STAGING.REF_MERCHANT_CATEGORY (8 rows, 3 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+MLOGIC(TIMER_START):  Beginning execution.
+MLOGIC(TIMER_START):  Parameter LABEL has value TRANSFORM
+SYMBOLGEN:  Macro variable LABEL resolves to TRANSFORM
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value INFO
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value Starting data transformation.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:48:28
+SYMBOLGEN:  Macro variable LEVEL resolves to INFO
+SYMBOLGEN:  Macro variable MSG resolves to Starting data transformation.
+13JUL2026:07:48:28 [INFO] Starting data transformation.
+NOTE: DATA STAGING.CUSTOMERS_CLEAN
+
+
+NOTE: Read 100 rows from STAGING.CUSTOMERS_RAW.
+NOTE: Wrote STAGING.CUSTOMERS_CLEAN (100 rows, 24 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA STAGING.TRANSACTIONS_CLEAN
+
+
+NOTE: Read 100 rows from STAGING.TRANSACTIONS_RAW.
+NOTE: Wrote STAGING.TRANSACTIONS_CLEAN (45 rows, 15 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SQL 
+
+NOTE: Table STAGING.CUST_TXN_AGG created.
+NOTE: PROC SQL statement used.
+NOTE: PROC SQL 
+
+NOTE: Table STAGING.MASTER_CUSTOMER created.
+NOTE: PROC SQL statement used.
+NOTE: DATA STAGING.CAMPAIGNS_ENRICHED
+
+
+NOTE: Read 100 rows from STAGING.CAMPAIGNS_RAW.
+NOTE: Wrote STAGING.CAMPAIGNS_ENRICHED (100 rows, 18 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+MLOGIC(TIMER_STOP):  Beginning execution.
+MLOGIC(TIMER_STOP):  Parameter LABEL has value TRANSFORM
+SYMBOLGEN:  Macro variable LABEL resolves to TRANSFORM
+SYMBOLGEN:  Macro variable LABEL resolves to TRANSFORM
+SYMBOLGEN:  Macro variable _TIMER_START_TRANSFORM resolves to 2099548108
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable LABEL resolves to TRANSFORM
+SYMBOLGEN:  Macro variable _ELAPSED resolves to 0
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value PERF
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value TRANSFORM elapsed 0 seconds.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:48:28
+SYMBOLGEN:  Macro variable LEVEL resolves to PERF
+SYMBOLGEN:  Macro variable MSG resolves to TRANSFORM elapsed 0 seconds.
+SYMBOLGEN:  Macro variable ALPHA resolves to 0.05
+13JUL2026:07:48:28 [PERF] TRANSFORM elapsed 0 seconds.
+NOTE: PROC TTEST data=STAGING.MASTER_CUSTOMER
+
+NOTE: ODS plot written: ttest_summary.spec.json
+NOTE: PROC TTEST ODS Graphics generated.
+NOTE: PROC TTEST statement used.
+NOTE: PROC GLM data=STAGING.MASTER_CUSTOMER
+
+NOTE: Warning message:
+NOTE: In file(paste0("<wrapper>", .jen_rfd), "rb") :
+NOTE:   using 'raw = TRUE' because '<wrapper>' is a fifo or pipe
+NOTE: Warning message:
+NOTE: In readLines(file("stdin")) : incomplete final line found on 'stdin'
+NOTE: ODS plot written: glm_residuals_vs_predicted.spec.json
+NOTE: ODS plot written: glm_residual_histogram_panel.spec.json
+NOTE: ODS plot written: glm_residuals_vs_obs_order.spec.json
+NOTE: ODS plot written: glm_qq_plot.spec.json
+NOTE: ODS plot written: glm_lsmeans_SEGMENT.spec.json
+NOTE: PROC GLM ODS Graphics generated.
+NOTE: PROC GLM statement used.
+NOTE: PROC NPAR1WAY data=STAGING.MASTER_CUSTOMER
+

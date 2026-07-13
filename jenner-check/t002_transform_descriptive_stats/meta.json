@@ -1,0 +1,7 @@
+{
+  "bundle": "t002_transform_descriptive_stats",
+  "source_file": "merged_project.sas",
+  "source_blob_sha": "b423d218b6ccb802eb77739faddc0caf078ba0e0",
+  "source_commit": "7bc1c298e16dd52fbd8e4f26615b6607e68f411c",
+  "notes": "Modules 01-03 + 04 (ingestion) + 05 (reference data) + 07 (data transformation: cleaning, age/credit/income banding, tenure/churn derivation, transaction winsorisation, customer<->transaction<->reference joins into MASTER_CUSTOMER, campaign ROI KPIs) + 08 (descriptive statistics: PROC MEANS overall and by-segment, PROC TABULATE region x segment cross-tab, PROC FREQ distributions with chi-square, PROC UNIVARIATE, PROC CORR, monthly transaction trend). BASE_PATH rewritten to a relative ./sasdata tree; otherwise unmodified. exit_code is 1 (not 0) because PROC FREQ genuinely emits a SAS WARNING about sparse expected cell counts at the 100-row sample size the unlicensed API run is capped to -- pinned deliberately rather than masked."
+}
