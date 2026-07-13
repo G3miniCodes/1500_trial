@@ -1,0 +1,89 @@
+
+NOTE: Option OBS changed to 100.
+NOTE: Library SASDATA assigned path=./sasdata.
+NOTE: Library SASDATA assigned path=./sasdata/raw.
+NOTE: Library SASDATA assigned path=./sasdata/staging.
+NOTE: Library SASDATA assigned path=./sasdata/output.
+NOTE: Library SASDATA assigned path=./sasdata/logs.
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+NOTE: Option COMPRESS changed to YES.
+NOTE: Option LS changed to 200.
+NOTE: Option PS changed to 60.
+NOTE: Option VALIDVARNAME changed to UPCASE.
+NOTE: Option OBS changed to MAX.
+NOTE: Option ERRORS changed to 20.
+NOTE: Option CPUCOUNT changed to ACTUAL.
+NOTE: Option TITLE changed to EY Analytics – Enterprise Reporting Suite.
+NOTE: Option FOOTNOTE changed to CONFIDENTIAL – For Internal Use Only.
+MLOGIC(TIMER_START):  Beginning execution.
+MLOGIC(TIMER_START):  Parameter LABEL has value INGESTION
+SYMBOLGEN:  Macro variable LABEL resolves to INGESTION
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value INFO
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value Starting data ingestion.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:46:11
+SYMBOLGEN:  Macro variable LEVEL resolves to INFO
+SYMBOLGEN:  Macro variable MSG resolves to Starting data ingestion.
+SYMBOLGEN:  Macro variable RAW_PATH resolves to ./sasdata/raw
+13JUL2026:07:46:11 [INFO] Starting data ingestion.
+NOTE: Library RAWDATA assigned path=./sasdata/raw.
+SYMBOLGEN:  Macro variable STAGE_PATH resolves to ./sasdata/staging
+NOTE: Library STAGING assigned path=./sasdata/staging.
+SYMBOLGEN:  Macro variable OUTPUT_PATH resolves to ./sasdata/output
+NOTE: Library OUTLIB assigned path=./sasdata/output.
+SYMBOLGEN:  Macro variable LOG_PATH resolves to ./sasdata/logs
+NOTE: Library LOGLIB assigned path=./sasdata/logs.
+SYMBOLGEN:  Macro variable SEED resolves to 42
+NOTE: DATA STAGING.TRANSACTIONS_RAW
+
+
+NOTE: Wrote STAGING.TRANSACTIONS_RAW (100 rows, 9 columns).
+NOTE: DATA elapsed:
+  wall  1.02 seconds
+  cpu   1.02 seconds
+NOTE: DATA STAGING.TRANSACTIONS_CLEAN
+
+
+NOTE: Read 100 rows from STAGING.TRANSACTIONS_RAW.
+NOTE: Wrote STAGING.TRANSACTIONS_CLEAN (45 rows, 15 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+SYMBOLGEN:  Macro variable PERIOD_END resolves to 31DEC2025
+NOTE: PROC SQL 
+
+NOTE: Table STAGING.RFM_BASE created.
+NOTE: PROC SQL statement used.
+NOTE: PROC RANK data=STAGING.RFM_BASE out=Some("STAGING.RFM_SCORED") descending groups=5
+
+
+NOTE: Read 45 rows from ././sasdata/staging/rfm_base.avro.
+NOTE: Wrote ././sasdata/staging/rfm_scored.avro (45 rows, 5 columns).
+NOTE: PROC RANK elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC RANK data=STAGING.RFM_SCORED out=Some("STAGING.RFM_SCORED") groups=5
+
+
+NOTE: Read 45 rows from ././sasdata/staging/rfm_scored.avro.
+NOTE: Wrote ././sasdata/staging/rfm_scored.avro (45 rows, 7 columns).
+NOTE: PROC RANK elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA STAGING.RFM_SCORED
+
+
+NOTE: Read 45 rows from STAGING.RFM_SCORED.
+NOTE: Wrote STAGING.RFM_SCORED (45 rows, 9 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FREQ
+NOTE: ODS plot written: freq_rfm_segment.spec.json
+NOTE: PROC FREQ statement used.
+NOTE: PROC MEANS
+NOTE: PROC MEANS statement used.

@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-07-13T07:46:51Z",
+  "_captured_run_id": "r_e9a3323d484f420588fb204c99f9c431",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote STAGING.TRANSACTIONS_CLEAN (45 rows, 15 columns).",
+    "NOTE: Table STAGING.RFM_BASE created.",
+    "NOTE: PROC RANK data=STAGING.RFM_BASE out=Some(\"STAGING.RFM_SCORED\") descending groups=5",
+    "NOTE: Wrote STAGING.RFM_SCORED (45 rows, 9 columns)."
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-07-13T07:35:27Z",
+  "_captured_run_id": "r_1a6c9c378a084294a6e0650324746baa",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote STAGING.CUSTOMERS_RAW (100 rows, 15 columns).",
+    "NOTE: Wrote STAGING.TRANSACTIONS_RAW (100 rows, 9 columns).",
+    "TEST PASSED: No Duplicate Customers",
+    "NOTE: Wrote STAGING.DQ_AUDIT_SUMMARY (4 rows, 6 columns)."
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

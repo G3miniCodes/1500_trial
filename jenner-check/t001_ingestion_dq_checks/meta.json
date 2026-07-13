@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_ingestion_dq_checks",
+  "source_file": "merged_project.sas",
+  "source_blob_sha": "b423d218b6ccb802eb77739faddc0caf078ba0e0",
+  "source_commit": "7bc1c298e16dd52fbd8e4f26615b6607e68f411c",
+  "notes": "Modules 01-03 (options/macros) + 04 (synthetic customer/transaction/campaign ingestion via call streaminit) + 05 (inline datalines reference tables) + 06 (data-quality checks: row counts, missing-value profiling, duplicate-ID check with %ASSERT_EQUAL, email regex validation, orphan-transaction referential check, Z-score outlier detection, audit summary). BASE_PATH libname target rewritten from /data/analytics to a relative ./sasdata tree; the 6.4 range-check sub-block (WHERE ... NOT BETWEEN ... AND ...) is omitted because Jenner's DATA-step WHERE parser does not yet accept NOT BETWEEN (PROC SQL supports it) -- filed as EastAgile/jenner-language#15121 (test 404302_where_not_between); every other DQ check in the module runs unmodified."
+}

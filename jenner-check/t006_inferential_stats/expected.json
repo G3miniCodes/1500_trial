@@ -1,0 +1,16 @@
+{
+  "_captured_at": "2026-07-13T07:49:33Z",
+  "_captured_run_id": "r_6e6650ce582f46be969be5d0ce75c0e1",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Table STAGING.MASTER_CUSTOMER created.",
+    "NOTE: PROC TTEST data=STAGING.MASTER_CUSTOMER",
+    "NOTE: PROC TTEST statement used.",
+    "NOTE: PROC GLM data=STAGING.MASTER_CUSTOMER",
+    "NOTE: PROC GLM statement used.",
+    "NOTE: PROC NPAR1WAY data=STAGING.MASTER_CUSTOMER"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

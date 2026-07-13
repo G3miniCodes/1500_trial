@@ -1,0 +1,7 @@
+{
+  "bundle": "t003_standardize_cluster_k",
+  "source_file": "merged_project.sas",
+  "source_blob_sha": "b423d218b6ccb802eb77739faddc0caf078ba0e0",
+  "source_commit": "7bc1c298e16dd52fbd8e4f26615b6607e68f411c",
+  "notes": "Modules 01-03 + 04 (ingestion) + 05 (reference data) + 07 (transformation through MASTER_CUSTOMER/CAMPAIGNS_ENRICHED) + 11.1-11.2 (clustering input prep: PROC STDIZE range-standardisation, then PROC FASTCLUS with maxclusters=10 to size the optimal-k CCC scan). BASE_PATH rewritten to a relative ./sasdata tree; otherwise unmodified. Stops before module 11.3, which calls PROC FASTCLUS with 'maxclus=4' -- MAXCLUS= is not a documented FASTCLUS option (the real option is MAXCLUSTERS=, alias MAXC=), so that line looks like the source script's own typo rather than a Jenner gap, and was left out rather than silently corrected."
+}

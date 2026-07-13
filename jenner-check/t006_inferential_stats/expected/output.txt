@@ -1,0 +1,149 @@
+                                                                               EY Analytics – Enterprise Reporting Suite                                                                                
+
+
+CONFIDENTIAL – For Internal Use Only
+                                                                               EY Analytics – Enterprise Reporting Suite                                                                                
+
+
+CONFIDENTIAL – For Internal Use Only
+                                                                               EY Analytics – Enterprise Reporting Suite                                                                                
+
+                  The TTEST Procedure                  
+               Variable:  ANNUAL_INCOME                
+
+GENDER             N        Mean     Std Dev    Std Err
+----------  --------  ----------  ----------  ---------
+M                 50  16565.6600  27434.1638  3879.7767
+F                 50  14029.8000  22082.8105  3122.9810
+Diff (1-2)             2535.8600                       
+
+GENDER      Lower CL Mean        Mean  Upper CL Mean  Lower CL Std Dev     Std Dev  Upper CL Std Dev
+----------  -------------  ----------  -------------  ----------------  ----------  ----------------
+M               8768.9569  16565.6600     24362.3631        22916.6901  27434.1638        34186.6267
+F               7753.9347  14029.8000     20305.6653        18446.5227  22082.8105        27518.1269
+Diff (1-2)     -7347.8393   2535.8600     12419.5593        21851.1837  24902.6491        28952.5466
+
+Method         Variances        DF   t Value  Pr > |t|
+-------------  ---------  --------  --------  --------
+Pooled         Equal            98      0.51    0.6118
+Satterthwaite  Unequal        93.7      0.51    0.6118
+
+   Equality of Variances    
+
+Method     F Value    Pr > F
+--------  --------  --------
+Folded F      1.54    0.1322
+
+
+CONFIDENTIAL – For Internal Use Only
+                                                                               EY Analytics – Enterprise Reporting Suite                                                                                
+
+                         The GLM Procedure                         
+                 Dependent Variable: credit_score                  
+
+Source          DF  Sum of Squares  Mean Square   F Value    Pr > F
+--------  --------  --------------  -----------  --------  --------
+segment          3     60625.78683  20208.59561      0.88    0.4541
+Error           96   2203250.21317  22950.52305                    
+
+Root MSE         151.49430    R-Square            0.0268
+Adj R-Sq           -0.0036
+
+       Means for Effect: SEGMENT        
+
+Level          Mean    Std Dev         N
+--------  ---------  ---------  --------
+Basic     567.24138  150.72009        29
+Premium   627.86207  139.05593        29
+Standard  585.54545  141.85664        22
+Trial     612.00000  178.17407        20
+
+Levene's Test for Homogeneity of Variance
+
+Statistic    Pr > F
+---------  --------
+   1.1988    0.3145
+
+ Least Squares Means for SEGMENT  
+
+Level       LSMean  Standard Error
+--------  --------  --------------
+Basic     567.2414                
+Premium   627.8621                
+Standard  585.5455                
+Trial     612.0000                
+
+Differences of Least Squares Means for SEGMENT (Adjustment for Multiple Comparisons: Tukey)
+
+Comparison          Estimate  Standard Error   t Value  Pr > |t|     Adj P
+------------------  --------  --------------  --------  --------  --------
+Basic - Premium     -60.6207         39.7844     -1.52    0.1309    0.4274
+Basic - Standard    -18.3041         42.8323     -0.43    0.6701    0.9737
+Basic - Trial       -44.7586         44.0332     -1.02    0.3120    0.7402
+Premium - Standard   42.3166         42.8323      0.99    0.3257    0.7566
+Premium - Trial      15.8621         44.0332      0.36    0.7195    0.9839
+Standard - Trial    -26.4545         46.8053     -0.57    0.5733    0.9421
+
+
+
+CONFIDENTIAL – For Internal Use Only
+                                                                               EY Analytics – Enterprise Reporting Suite                                                                               2
+
+                               The NPAR1WAY Procedure                               
+                Wilcoxon Scores (Rank Sums) for Variable TOTAL_SPEND                
+
+CHURN_FLAG         N  Sum of Scores  Expected Under H0  Std Dev Under H0  Mean Score
+----------  --------  -------------  -----------------  ----------------  ----------
+0                 61      3119.5000          3080.5000           34.3200     51.1400
+1                 39      1930.5000          1969.5000           34.3200     49.5000
+
+   Kruskal-Wallis Test   
+
+Statistic           Value
+---------------  --------
+Chi-Square         1.2916
+DF                      1
+Pr > Chi-Square    0.2558
+P Value            0.2558
+
+  Wilcoxon Two-Sample Test   
+
+Statistic               Value
+------------------  ---------
+S                   3119.5000
+Expected Under H0   3080.5000
+Std Dev Under H0      34.3162
+Z                      1.1365
+Two-Sided Pr > |Z|     0.2558
+P Value                0.2558
+                               The NPAR1WAY Procedure                               
+                 Wilcoxon Scores (Rank Sums) for Variable TXN_COUNT                 
+
+CHURN_FLAG         N  Sum of Scores  Expected Under H0  Std Dev Under H0  Mean Score
+----------  --------  -------------  -----------------  ----------------  ----------
+0                 61      3119.5000          3080.5000           34.3100     51.1400
+1                 39      1930.5000          1969.5000           34.3100     49.5000
+
+   Kruskal-Wallis Test   
+
+Statistic           Value
+---------------  --------
+Chi-Square         1.2917
+DF                      1
+Pr > Chi-Square    0.2557
+P Value            0.2557
+
+  Wilcoxon Two-Sample Test   
+
+Statistic               Value
+------------------  ---------
+S                   3119.5000
+Expected Under H0   3080.5000
+Std Dev Under H0      34.3145
+Z                      1.1365
+Two-Sided Pr > |Z|     0.2557
+P Value                0.2557
+
+
+
+CONFIDENTIAL – For Internal Use Only

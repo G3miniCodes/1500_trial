@@ -1,0 +1,355 @@
+
+NOTE: Option OBS changed to 100.
+NOTE: Library SASDATA assigned path=./sasdata.
+NOTE: Library SASDATA assigned path=./sasdata/raw.
+NOTE: Library SASDATA assigned path=./sasdata/staging.
+NOTE: Library SASDATA assigned path=./sasdata/output.
+NOTE: Library SASDATA assigned path=./sasdata/logs.
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+SYMBOLGEN:  Macro variable BASE_PATH resolves to ./sasdata
+NOTE: Option COMPRESS changed to YES.
+NOTE: Option LS changed to 200.
+NOTE: Option PS changed to 60.
+NOTE: Option VALIDVARNAME changed to UPCASE.
+NOTE: Option OBS changed to MAX.
+NOTE: Option ERRORS changed to 20.
+NOTE: Option CPUCOUNT changed to ACTUAL.
+NOTE: Option TITLE changed to EY Analytics – Enterprise Reporting Suite.
+NOTE: Option FOOTNOTE changed to CONFIDENTIAL – For Internal Use Only.
+MLOGIC(TIMER_START):  Beginning execution.
+MLOGIC(TIMER_START):  Parameter LABEL has value INGESTION
+SYMBOLGEN:  Macro variable LABEL resolves to INGESTION
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value INFO
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value Starting data ingestion.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:23
+SYMBOLGEN:  Macro variable LEVEL resolves to INFO
+SYMBOLGEN:  Macro variable MSG resolves to Starting data ingestion.
+SYMBOLGEN:  Macro variable RAW_PATH resolves to ./sasdata/raw
+13JUL2026:07:34:23 [INFO] Starting data ingestion.
+NOTE: Library RAWDATA assigned path=./sasdata/raw.
+SYMBOLGEN:  Macro variable STAGE_PATH resolves to ./sasdata/staging
+NOTE: Library STAGING assigned path=./sasdata/staging.
+SYMBOLGEN:  Macro variable OUTPUT_PATH resolves to ./sasdata/output
+NOTE: Library OUTLIB assigned path=./sasdata/output.
+SYMBOLGEN:  Macro variable LOG_PATH resolves to ./sasdata/logs
+NOTE: Library LOGLIB assigned path=./sasdata/logs.
+SYMBOLGEN:  Macro variable SEED resolves to 42
+NOTE: DATA STAGING.CUSTOMERS_RAW
+
+
+NOTE: Wrote STAGING.CUSTOMERS_RAW (100 rows, 15 columns).
+NOTE: DATA elapsed:
+  wall  0.14 seconds
+  cpu   0.14 seconds
+SYMBOLGEN:  Macro variable SEED resolves to 42
+NOTE: DATA STAGING.TRANSACTIONS_RAW
+
+
+NOTE: Wrote STAGING.TRANSACTIONS_RAW (100 rows, 9 columns).
+NOTE: DATA elapsed:
+  wall  0.98 seconds
+  cpu   0.98 seconds
+SYMBOLGEN:  Macro variable SEED resolves to 42
+NOTE: DATA STAGING.CAMPAIGNS_RAW
+
+
+NOTE: Wrote STAGING.CAMPAIGNS_RAW (100 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+MLOGIC(TIMER_STOP):  Beginning execution.
+MLOGIC(TIMER_STOP):  Parameter LABEL has value INGESTION
+SYMBOLGEN:  Macro variable LABEL resolves to INGESTION
+SYMBOLGEN:  Macro variable LABEL resolves to INGESTION
+SYMBOLGEN:  Macro variable _TIMER_START_INGESTION resolves to 2099547263
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable LABEL resolves to INGESTION
+SYMBOLGEN:  Macro variable _ELAPSED resolves to 2
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value PERF
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value INGESTION elapsed 2 seconds.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to PERF
+SYMBOLGEN:  Macro variable MSG resolves to INGESTION elapsed 2 seconds.
+13JUL2026:07:34:25 [PERF] INGESTION elapsed 2 seconds.
+NOTE: DATA STAGING.REF_COUNTRY
+
+NOTE: Processing inline DATALINES (10 lines)
+
+NOTE: Read 10 rows from DATALINES.
+NOTE: Wrote STAGING.REF_COUNTRY (10 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA STAGING.REF_SEGMENT_TIER
+
+NOTE: Processing inline DATALINES (4 lines)
+
+NOTE: Read 4 rows from DATALINES.
+NOTE: Wrote STAGING.REF_SEGMENT_TIER (4 rows, 6 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA STAGING.REF_MERCHANT_CATEGORY
+
+NOTE: Processing inline DATALINES (8 lines)
+
+NOTE: Read 8 rows from DATALINES.
+NOTE: Wrote STAGING.REF_MERCHANT_CATEGORY (8 rows, 3 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+MLOGIC(TIMER_START):  Beginning execution.
+MLOGIC(TIMER_START):  Parameter LABEL has value DQ_CHECKS
+SYMBOLGEN:  Macro variable LABEL resolves to DQ_CHECKS
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value INFO
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value Starting data quality checks.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to INFO
+SYMBOLGEN:  Macro variable MSG resolves to Starting data quality checks.
+MLOGIC(ROW_COUNT):  Beginning execution.
+MLOGIC(ROW_COUNT):  Parameter LIB has value STAGING
+MLOGIC(ROW_COUNT):  Parameter DSN has value CUSTOMERS_RAW
+MLOGIC(ROW_COUNT):  Parameter OUTVAR has value N_CUSTOMERS
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to CUSTOMERS_RAW
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to CUSTOMERS_RAW
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_CUSTOMERS
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to CUSTOMERS_RAW
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_CUSTOMERS
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value INFO
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value STAGING.CUSTOMERS_RAW has &N_CUSTOMERS observations.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to INFO
+SYMBOLGEN:  Macro variable MSG resolves to STAGING.CUSTOMERS_RAW has &N_CUSTOMERS observations.
+MLOGIC(ROW_COUNT):  Beginning execution.
+MLOGIC(ROW_COUNT):  Parameter LIB has value STAGING
+MLOGIC(ROW_COUNT):  Parameter DSN has value TRANSACTIONS_RAW
+MLOGIC(ROW_COUNT):  Parameter OUTVAR has value N_TRANSACTIONS
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to TRANSACTIONS_RAW
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to TRANSACTIONS_RAW
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_TRANSACTIONS
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to TRANSACTIONS_RAW
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_TRANSACTIONS
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value INFO
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value STAGING.TRANSACTIONS_RAW has &N_TRANSACTIONS observations.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to INFO
+SYMBOLGEN:  Macro variable MSG resolves to STAGING.TRANSACTIONS_RAW has &N_TRANSACTIONS observations.
+MLOGIC(ROW_COUNT):  Beginning execution.
+MLOGIC(ROW_COUNT):  Parameter LIB has value STAGING
+MLOGIC(ROW_COUNT):  Parameter DSN has value CAMPAIGNS_RAW
+MLOGIC(ROW_COUNT):  Parameter OUTVAR has value N_CAMPAIGNS
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to CAMPAIGNS_RAW
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to CAMPAIGNS_RAW
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_CAMPAIGNS
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to CAMPAIGNS_RAW
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_CAMPAIGNS
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value INFO
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value STAGING.CAMPAIGNS_RAW has &N_CAMPAIGNS observations.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to INFO
+SYMBOLGEN:  Macro variable MSG resolves to STAGING.CAMPAIGNS_RAW has &N_CAMPAIGNS observations.
+13JUL2026:07:34:25 [INFO] Starting data quality checks.
+13JUL2026:07:34:25 [INFO] STAGING.CUSTOMERS_RAW has &N_CUSTOMERS observations.
+13JUL2026:07:34:25 [INFO] STAGING.TRANSACTIONS_RAW has &N_TRANSACTIONS observations.
+13JUL2026:07:34:25 [INFO] STAGING.CAMPAIGNS_RAW has &N_CAMPAIGNS observations.
+NOTE: PROC SQL 
+
+NOTE: Table STAGING.DQ_MISSING_CUSTOMERS created.
+NOTE: PROC SQL statement used.
+NOTE: PROC SQL 
+
+NOTE: Table STAGING.DQ_DUPE_CUSTOMERS created.
+NOTE: PROC SQL statement used.
+MLOGIC(ROW_COUNT):  Beginning execution.
+MLOGIC(ROW_COUNT):  Parameter LIB has value STAGING
+MLOGIC(ROW_COUNT):  Parameter DSN has value DQ_DUPE_CUSTOMERS
+MLOGIC(ROW_COUNT):  Parameter OUTVAR has value N_DUPES
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to DQ_DUPE_CUSTOMERS
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to DQ_DUPE_CUSTOMERS
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_DUPES
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to DQ_DUPE_CUSTOMERS
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_DUPES
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value INFO
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value STAGING.DQ_DUPE_CUSTOMERS has &N_DUPES observations.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to INFO
+SYMBOLGEN:  Macro variable MSG resolves to STAGING.DQ_DUPE_CUSTOMERS has &N_DUPES observations.
+MLOGIC(ASSERT_EQUAL):  Beginning execution.
+SYMBOLGEN:  Macro variable N_DUPES resolves to 0
+MLOGIC(ASSERT_EQUAL):  Parameter ACTUAL has value 0
+MLOGIC(ASSERT_EQUAL):  Parameter EXPECTED has value 0
+MLOGIC(ASSERT_EQUAL):  Parameter TEST_NAME has value No Duplicate Customers
+SYMBOLGEN:  Macro variable ACTUAL resolves to 0
+SYMBOLGEN:  Macro variable EXPECTED resolves to 0
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable TEST_NAME resolves to No Duplicate Customers
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value PASS
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value TEST PASSED: No Duplicate Customers
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to PASS
+SYMBOLGEN:  Macro variable MSG resolves to TEST PASSED: No Duplicate Customers
+13JUL2026:07:34:25 [INFO] STAGING.DQ_DUPE_CUSTOMERS has &N_DUPES observations.
+13JUL2026:07:34:25 [PASS] TEST PASSED: No Duplicate Customers
+NOTE: DATA STAGING.DQ_INVALID_EMAIL
+
+
+NOTE: Read 100 rows from STAGING.CUSTOMERS_RAW.
+NOTE: Wrote STAGING.DQ_INVALID_EMAIL (0 rows, 15 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SQL 
+
+NOTE: Table STAGING.DQ_ORPHAN_TRANSACTIONS created.
+NOTE: PROC SQL statement used.
+MLOGIC(ROW_COUNT):  Beginning execution.
+MLOGIC(ROW_COUNT):  Parameter LIB has value STAGING
+MLOGIC(ROW_COUNT):  Parameter DSN has value DQ_ORPHAN_TRANSACTIONS
+MLOGIC(ROW_COUNT):  Parameter OUTVAR has value N_ORPHAN
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to DQ_ORPHAN_TRANSACTIONS
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to DQ_ORPHAN_TRANSACTIONS
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_ORPHAN
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to DQ_ORPHAN_TRANSACTIONS
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_ORPHAN
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value INFO
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value STAGING.DQ_ORPHAN_TRANSACTIONS has &N_ORPHAN observations.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to INFO
+SYMBOLGEN:  Macro variable MSG resolves to STAGING.DQ_ORPHAN_TRANSACTIONS has &N_ORPHAN observations.
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable N_ORPHAN resolves to 96
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value WARN
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value 96 orphan transactions found.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to WARN
+SYMBOLGEN:  Macro variable MSG resolves to 96 orphan transactions found.
+13JUL2026:07:34:25 [INFO] STAGING.DQ_ORPHAN_TRANSACTIONS has &N_ORPHAN observations.
+13JUL2026:07:34:25 [WARN] 96 orphan transactions found.
+NOTE: PROC MEANS
+NOTE: Output dataset _txn_stats has 1 observations and 4 variables.
+NOTE: PROC MEANS statement used.
+NOTE: DATA _null_
+
+
+NOTE: Read 1 rows from _txn_stats.
+NOTE: Wrote _null_ (1 rows, 4 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+SYMBOLGEN:  Macro variable TXN_MEAN resolves to 583.0930000000002
+SYMBOLGEN:  Macro variable TXN_STD resolves to 1351.615795047251
+SYMBOLGEN:  Macro variable OUTLIER_STD resolves to 3
+NOTE: DATA STAGING.DQ_TXN_OUTLIERS
+
+
+NOTE: Read 100 rows from STAGING.TRANSACTIONS_RAW.
+NOTE: Wrote STAGING.DQ_TXN_OUTLIERS (1 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+MLOGIC(ROW_COUNT):  Beginning execution.
+MLOGIC(ROW_COUNT):  Parameter LIB has value STAGING
+MLOGIC(ROW_COUNT):  Parameter DSN has value DQ_TXN_OUTLIERS
+MLOGIC(ROW_COUNT):  Parameter OUTVAR has value N_OUTLIERS
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to DQ_TXN_OUTLIERS
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to DQ_TXN_OUTLIERS
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_OUTLIERS
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+SYMBOLGEN:  Macro variable DSID resolves to 1
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable LIB resolves to STAGING
+SYMBOLGEN:  Macro variable DSN resolves to DQ_TXN_OUTLIERS
+SYMBOLGEN:  Macro variable OUTVAR resolves to N_OUTLIERS
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value INFO
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value STAGING.DQ_TXN_OUTLIERS has &N_OUTLIERS observations.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to INFO
+SYMBOLGEN:  Macro variable MSG resolves to STAGING.DQ_TXN_OUTLIERS has &N_OUTLIERS observations.
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable N_OUTLIERS resolves to 1
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value WARN
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value 1 transaction amount outliers detected.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to WARN
+SYMBOLGEN:  Macro variable MSG resolves to 1 transaction amount outliers detected.
+SYMBOLGEN:  Macro variable RUN_DTTM resolves to 13JUL2026:07:34:23
+SYMBOLGEN:  Macro variable N_CUSTOMERS resolves to 100
+SYMBOLGEN:  Macro variable N_DUPES resolves to 0
+SYMBOLGEN:  Macro variable N_CUSTOMERS resolves to 100
+SYMBOLGEN:  Macro variable N_RANGE_VIOL resolves to 0
+SYMBOLGEN:  Macro variable N_TRANSACTIONS resolves to 100
+SYMBOLGEN:  Macro variable N_ORPHAN resolves to 96
+SYMBOLGEN:  Macro variable N_TRANSACTIONS resolves to 100
+SYMBOLGEN:  Macro variable N_OUTLIERS resolves to 1
+13JUL2026:07:34:25 [INFO] STAGING.DQ_TXN_OUTLIERS has &N_OUTLIERS observations.
+13JUL2026:07:34:25 [WARN] 1 transaction amount outliers detected.
+NOTE: DATA STAGING.DQ_AUDIT_SUMMARY
+
+
+NOTE: Wrote STAGING.DQ_AUDIT_SUMMARY (4 rows, 6 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+MLOGIC(TIMER_STOP):  Beginning execution.
+MLOGIC(TIMER_STOP):  Parameter LABEL has value DQ_CHECKS
+SYMBOLGEN:  Macro variable LABEL resolves to DQ_CHECKS
+SYMBOLGEN:  Macro variable LABEL resolves to DQ_CHECKS
+SYMBOLGEN:  Macro variable _TIMER_START_DQ_CHECKS resolves to 2099547265
+MLOGIC(LOG_MESSAGE):  Beginning execution.
+SYMBOLGEN:  Macro variable LABEL resolves to DQ_CHECKS
+SYMBOLGEN:  Macro variable _ELAPSED resolves to 0
+MLOGIC(LOG_MESSAGE):  Parameter LEVEL has value PERF
+MLOGIC(LOG_MESSAGE):  Parameter MSG has value DQ_CHECKS elapsed 0 seconds.
+SYMBOLGEN:  Macro variable _TS resolves to 13JUL2026:07:34:25
+SYMBOLGEN:  Macro variable LEVEL resolves to PERF
+SYMBOLGEN:  Macro variable MSG resolves to DQ_CHECKS elapsed 0 seconds.
+13JUL2026:07:34:25 [PERF] DQ_CHECKS elapsed 0 seconds.
